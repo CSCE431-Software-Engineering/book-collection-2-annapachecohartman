@@ -1,0 +1,18 @@
+<table summary="Book form fields">
+      <tr>
+        <th>Title</th>
+        <td><%= b.text_field(:title) %></td>
+      </tr>
+      <tr>
+        <th>Author</th>
+        <td><%= b.text_field(:author) %></td>
+      </tr>
+      <tr>
+        <th>Price</th>
+        <td><%= b.number_field(:price, step:0.01) %></td>
+      </tr>
+      <tr>
+        <th>Date Published</th>
+        <td><%= b.date_field(:published_date) %></td>
+      </tr>
+</table>

@@ -1,0 +1,15 @@
+<%= link_to("Back to Homepage", {controller: 'books', action: 'index'}) %><br />
+<div class="books new">
+  <h2>Create Book</h2>
+
+  <%= form_for(@book) do |b| %>
+    <% # url: tasks_path, method: 'post' %>
+
+    <%= render(partial: 'form', locals: {b: b})%>
+
+    <div class="form-buttons">
+      <%= b.submit("Create Book") %>
+    </div>
+
+  <% end %>
+</div>
