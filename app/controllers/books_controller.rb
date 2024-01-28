@@ -21,6 +21,7 @@ class BooksController < ApplicationController
       flash[:notice] = 'Book was successfully created.'
       redirect_to books_path
     else
+      puts "Errors: #{@book.errors.full_messages}"
       render 'new'
     end
   end
@@ -59,7 +60,10 @@ class BooksController < ApplicationController
       :title,
       :author,
       :price,
-      :published_date)
+      :published_date,
+      :publisher,
+      :pages,
+      :release_date)
   end
 
 

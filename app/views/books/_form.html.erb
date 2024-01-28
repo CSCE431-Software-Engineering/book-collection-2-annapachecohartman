@@ -15,4 +15,16 @@
         <th>Date Published</th>
         <td><%= b.date_field(:published_date) %></td>
       </tr>
+      <tr>
+        <th>Publisher</th>
+        <td><%= b.text_field(:publisher) %></td>
+      </tr>
+      <tr>
+        <th>Pages</th>
+        <td><%= b.number_field(:pages, step:1) %></td>
+      </tr>
+      <tr>
+        <th>Release date</th>
+        <td><%= b.date_field(:release_date) %></td>
+      </tr>
 </table>
