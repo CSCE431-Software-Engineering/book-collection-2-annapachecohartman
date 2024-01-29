@@ -18,11 +18,12 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      flash[:notice] = 'Book was successfully created.'
+      flash.now[:notice] = 'Book was successfully created.'
       redirect_to books_path
     else
       puts "Errors: #{@book.errors.full_messages}"
-      render 'new'
+      flash[:notice] = 'Book could not be created.'
+      redirect_to books_path
     end
   end
 

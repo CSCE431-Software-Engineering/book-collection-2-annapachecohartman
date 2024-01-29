@@ -1949,3 +1949,648 @@ Migrating to AddReleaseDateToBooks (20240128201310)
   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7968048649409907660)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-01-29 10:46:50 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1999)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 35149)
+Completed 200 OK in 42ms (Views: 30.8ms | ActiveRecord: 2.7ms | Allocations: 41256)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 10:46:51 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 6.1ms | Allocations: 1310)
+  Rendered books/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3001)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4464)
+Completed 200 OK in 38ms (Views: 13.6ms | ActiveRecord: 5.4ms | Allocations: 11644)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:00 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.3ms | Allocations: 1839)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2364)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3800)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 7703)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:02 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.6ms | Allocations: 1810)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3551)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6397)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:02 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.0ms | Allocations: 1810)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3551)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 6367)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:02 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.3ms | Allocations: 1810)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3550)
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 6366)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:03 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.4ms | Allocations: 1810)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2221)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3548)
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 6364)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:03 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.0ms | Allocations: 1810)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2221)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3555)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 6354)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:03 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.5ms | Allocations: 1810)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2221)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3548)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 6359)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:04 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"pee", "price"=>"15.99", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.1ms | Allocations: 1810)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2221)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3548)
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 6351)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:47:14 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"kj", "author"=>"pee", "price"=>"15.99", "published_date"=>"2024-01-03", "publisher"=>"dsf", "pages"=>"2", "release_date"=>"2024-01-10"}, "commit"=>"Create Book"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at", "publisher", "pages", "release_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "kj"], ["author", "pee"], ["price", "15.99"], ["published_date", "2024-01-03 00:00:00"], ["created_at", "2024-01-29 16:47:14.877413"], ["updated_at", "2024-01-29 16:47:14.877413"], ["publisher", "dsf"], ["pages", 2], ["release_date", "2024-01-10 00:00:00"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 13ms (ActiveRecord: 3.0ms | Allocations: 3513)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:47:14 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2428)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.6ms | Allocations: 2738)
+
+
+Started GET "/books/3/delete" for 127.0.0.1 at 2024-01-29 10:47:16 -0600
+Processing by BooksController#delete as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:46:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 2.0ms | Allocations: 973)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2409)
+Completed 200 OK in 30ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 7474)
+
+
+Started DELETE "/books/3" for 127.0.0.1 at 2024-01-29 10:47:26 -0600
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Book", "id"=>"3"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:50:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms | Allocations: 2481)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:47:26 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 806)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2141)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 1.2ms | Allocations: 2446)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:49:10 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1024)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 16519)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.7ms | Allocations: 18880)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 10:49:11 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.9ms | Allocations: 527)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1617)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2952)
+Completed 200 OK in 62ms (Views: 14.5ms | ActiveRecord: 8.0ms | Allocations: 5935)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:49:15 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"d", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+[31mUnpermitted parameters: :authenticity_token, :book, :commit. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x000000010a9af3c0>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"d", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 7.0ms | Allocations: 2287)
+  Rendered books/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2698)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4025)
+Completed 200 OK in 34ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 7847)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:49:16 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"d", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+[31mUnpermitted parameters: :authenticity_token, :book, :commit. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x000000010a3f6c08>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"d", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 1.5ms | Allocations: 2284)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2695)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 4026)
+Completed 200 OK in 46ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 7504)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:49:16 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"d", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+[31mUnpermitted parameters: :authenticity_token, :book, :commit. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x0000000109485d00>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"d", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.6ms | Allocations: 2284)
+  Rendered books/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2695)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4025)
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 7529)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-29 10:49:25 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 806)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2141)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 2443)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-29 10:49:25 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 769)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2104)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2394)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 10:49:29 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.5ms | Allocations: 483)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2400)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 3188)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:49:30 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"j", "author"=>"", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+[31mUnpermitted parameters: :authenticity_token, :book, :commit. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x000000010a22f6b8>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"j", "author"=>"", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.1ms | Allocations: 2284)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2695)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4022)
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 7521)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 10:56:31 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.5ms | Allocations: 1317)
+  Rendered books/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3545)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 36305)
+Completed 200 OK in 51ms (Views: 31.7ms | ActiveRecord: 4.4ms | Allocations: 48896)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-29 10:56:32 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2937)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.0ms | Allocations: 3411)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 10:56:32 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.6ms | Allocations: 490)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2432)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 3253)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:56:35 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+[31mUnpermitted parameters: :authenticity_token, :book, :commit. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x0000000108835910>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at", "publisher", "pages", "release_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", nil], ["author", nil], ["price", nil], ["published_date", nil], ["created_at", "2024-01-29 16:56:35.014793"], ["updated_at", "2024-01-29 16:56:35.014793"], ["publisher", nil], ["pages", nil], ["release_date", nil]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 13ms (ActiveRecord: 2.5ms | Allocations: 4254)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:56:35 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1071)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2517)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 2915)
+
+
+Started GET "/books/4/delete" for 127.0.0.1 at 2024-01-29 10:56:47 -0600
+Processing by BooksController#delete as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:46:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 3.4ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2398)
+Completed 200 OK in 17ms (Views: 7.8ms | ActiveRecord: 0.8ms | Allocations: 5130)
+
+
+Started DELETE "/books/4" for 127.0.0.1 at 2024-01-29 10:56:49 -0600
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Book", "id"=>"4"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:50:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms | Allocations: 2471)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:56:49 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 813)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2148)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.6ms | Allocations: 2453)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:59:01 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:21
+  Rendered books/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2028)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 35143)
+Completed 200 OK in 42ms (Views: 32.1ms | ActiveRecord: 2.5ms | Allocations: 41047)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 10:59:02 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.4ms | Allocations: 1310)
+  Rendered books/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2994)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4457)
+Completed 200 OK in 32ms (Views: 11.7ms | ActiveRecord: 4.3ms | Allocations: 11637)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 10:59:04 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"kjk", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+[31mUnpermitted parameters: :authenticity_token, :book, :commit. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x000000010a386b10>, params: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"kjk", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book", "controller"=>"books", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at", "publisher", "pages", "release_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", nil], ["author", nil], ["price", nil], ["published_date", nil], ["created_at", "2024-01-29 16:59:04.418451"], ["updated_at", "2024-01-29 16:59:04.418451"], ["publisher", nil], ["pages", nil], ["release_date", nil]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms | Allocations: 4258)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:59:04 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:21
+  Rendered books/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2532)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 2930)
+
+
+Started GET "/books/5/delete" for 127.0.0.1 at 2024-01-29 10:59:09 -0600
+Processing by BooksController#delete as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:46:in `delete'
+  Rendering layout layouts/application.html.erb
+  Rendering books/delete.html.erb within layouts/application
+  Rendered books/delete.html.erb within layouts/application (Duration: 3.0ms | Allocations: 946)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2383)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 5115)
+
+
+Started DELETE "/books/5" for 127.0.0.1 at 2024-01-29 10:59:11 -0600
+Processing by BooksController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Delete Book", "id"=>"5"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:50:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+  [1m[36mBook Destroy (0.5ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:51:in `destroy'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms | Allocations: 2495)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 10:59:11 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:21
+  Rendered books/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 798)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2134)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 2440)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 11:40:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2031)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 35085)
+Completed 200 OK in 37ms (Views: 28.2ms | ActiveRecord: 2.7ms | Allocations: 41198)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 11:40:46 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.4ms | Allocations: 1310)
+  Rendered books/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2997)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4460)
+Completed 200 OK in 37ms (Views: 12.1ms | ActiveRecord: 6.6ms | Allocations: 11640)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 11:40:49 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"sadf", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 3.1ms | Allocations: 2096)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2621)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4057)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8331)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 11:40:50 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"sadf", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.5ms | Allocations: 2067)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2480)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3808)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 6998)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 11:40:50 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"sadf", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.9ms | Allocations: 2067)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2480)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3808)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 6994)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 11:40:51 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"sadf", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.8ms | Allocations: 2067)
+  Rendered books/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2480)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3807)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6981)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-29 11:40:54 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 849)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2184)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 2492)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 11:40:56 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.4ms | Allocations: 483)
+  Rendered books/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1059)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2401)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.3ms | Allocations: 3210)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 11:41:30 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.4ms | Allocations: 529)
+  Rendered books/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 17283)
+Completed 200 OK in 18ms (Views: 10.3ms | ActiveRecord: 3.4ms | Allocations: 22312)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-29 11:41:30 -0600
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2211)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 2557)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 11:41:31 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.5ms | Allocations: 483)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1059)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2394)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 3200)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 11:41:35 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "author"=>"khjkm", "price"=>"", "published_date"=>"", "publisher"=>"", "pages"=>"", "release_date"=>""}, "commit"=>"Create Book"}
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 3407)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 11:41:35 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2146)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 2441)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2024-01-29 11:41:37 -0600
+Processing by BooksController#new as HTML
+  [1m[36mBook Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:14:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 0.7ms | Allocations: 483)
+  Rendered books/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2400)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 3196)
+
+
+Started POST "/books" for 127.0.0.1 at 2024-01-29 11:41:52 -0600
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"Harry Potter", "author"=>"KJlkdf", "price"=>"14.99", "published_date"=>"2024-01-10", "publisher"=>"sdfsf", "pages"=>"40", "release_date"=>"2024-01-06"}, "commit"=>"Create Book"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "price", "published_date", "created_at", "updated_at", "publisher", "pages", "release_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Harry Potter"], ["author", "KJlkdf"], ["price", "14.99"], ["published_date", "2024-01-10 00:00:00"], ["created_at", "2024-01-29 17:41:52.126206"], ["updated_at", "2024-01-29 17:41:52.126206"], ["publisher", "sdfsf"], ["pages", 40], ["release_date", "2024-01-06 00:00:00"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Redirected to http://127.0.0.1:3000/books
+Completed 302 Found in 12ms (ActiveRecord: 2.5ms | Allocations: 3431)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-01-29 11:41:52 -0600
+Processing by BooksController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."price" ASC[0m
+  ↳ app/views/books/index.html.erb:22
+  Rendered books/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1071)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2406)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.7ms | Allocations: 2701)
+
+
